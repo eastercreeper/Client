@@ -37,7 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://b44v7e2jfwmkn" path="res://user/skins/default/ui/buttons/random.png" id="27_tgcit"]
 [ext_resource type="Script" uid="uid://d36x1ln46itd1" path="res://scripts/ui/menu/play/RandomPickButton.cs" id="27_u43bj"]
 [ext_resource type="Script" uid="uid://nob6vs2h1mwj" path="res://scripts/ui/menu/ImportButton.cs" id="28_eku7s"]
-[ext_resource type="Script" path="res://scripts/ui/menu/ConverterButton.cs" id="45_converter"]
+[ext_resource type="Script" path="res://scripts/ui/menu/ConverterButton.cs" id="45_b8nq4"]
 [ext_resource type="Shader" uid="uid://rngh60dyh10b" path="res://scripts/shaders/outline.gdshader" id="30_q13xq"]
 [ext_resource type="Texture2D" uid="uid://bfy3x7rqnts4i" path="res://user/skins/default/ui/buttons/filter.png" id="31_5053t"]
 [ext_resource type="Texture2D" uid="uid://bl6ten82nkjmd" path="res://user/skins/default/ui/buttons/sort.png" id="32_2wgix"]
@@ -500,7 +500,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_b4jiv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vanrq")
 text = "CONVERTER"
 alignment = 0
-script = ExtResource("45_converter")
+script = ExtResource("45_b8nq4")
 
 [node name="Quit" type="Button" parent="Menus/Home/Buttons" unique_id=87671349]
 layout_mode = 2
