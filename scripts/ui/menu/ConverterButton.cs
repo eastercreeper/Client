@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using System.Threading.Tasks;
 
 public partial class ConverterButton : Button
 {
@@ -10,10 +9,10 @@ public partial class ConverterButton : Button
 
     public override void _Pressed()
     {
-        _ = RunConversionAsync();
+        RunConversionAsync();
     }
 
-    private async Task RunConversionAsync()
+    private async void RunConversionAsync()
     {
         try
         {
@@ -21,16 +20,16 @@ public partial class ConverterButton : Button
 
             if (converted == 0 && failed == 0)
             {
-                _ = ToastNotification.Notify("Converter finished: no SSPM files found.", SeverityWarning);
+                await ToastNotification.Notify("Converter finished: no SSPM files found.", SeverityWarning);
                 return;
             }
 
-            _ = ToastNotification.Notify($"Converter finished: {converted} converted, {failed} failed", failed > 0 ? SeverityWarning : SeveritySuccess);
+            await ToastNotification.Notify($"Converter finished: {converted} converted, {failed} failed", failed > 0 ? SeverityWarning : SeveritySuccess);
         }
         catch (Exception ex)
         {
             Logger.Error(ex);
-            _ = ToastNotification.Notify($"Converter failed: {ex.Message}", SeverityError);
+            await ToastNotification.Notify($"Converter failed: {ex.Message}", SeverityError);
         }
     }
 }
